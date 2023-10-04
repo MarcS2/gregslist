@@ -17,17 +17,21 @@ export class House {
     return `<section class="row justify-content-center">
 
     <div class="col-10 ">
-      <div class="d-flex m-3 mt-4 border border-2 border-dark shadow">
+      <div class="d-flex m-3 mt-4 border border-3 border-dark shadow">
 
         <img class="house-img "
         src="${this.imgUrl}"
         alt="house">
-      <div class="p-3 fs-4 ">
+      <div class="p-3 fs-4 house-txt">
         <p class="fs-2 m-0">${this.name}</p>
         <p>Price: ${this.price}</p>
         <p>Year: ${this.year}</p>
         <p>${this.bedrooms} Bedrooms, ${this.bathrooms} Bathrooms, ${this.sqft} Square Feet,</p>
         <p>Description: ${this.description}</p>
+        <div class="text-end ">
+        <button type="button" class="btn btn-danger" onclick="app.HousesController.removeHouse('${this.id
+      }')">Delete</button>
+        </div>
       </div>
     </div>
   </section>
