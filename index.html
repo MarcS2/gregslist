@@ -33,6 +33,7 @@
           <!-- NAVLINKS -->
           <a href="#/about" class="nav-link">About</a>
           <a href="#/cars" class="nav-link">Cars</a>
+          <a href="#/houses" class="nav-link">Houses</a>
           <!-- TODO create a link tag to navigate to houses page -->
         </div>
       </div>
@@ -43,6 +44,60 @@
   <main id="router-view">
     <!-- PRIMARY VIEWPORT -->
     <!-- TODO once you are on the houses page, write your HTML here -->
+    <div class="container-fluid">
+      <section class="row">
+        <div class="col-12 p-3">
+          <h1>Houses</h1>
+        </div>
+      </section>
+      <section class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <form onsubmit="app.HousesController.newHouse(event)">
+            <div class="mb-2">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="First and Last" maxlength="80" minlength="2">
+            </div>
+            <div class="mb-2">
+              <label for="year">Year</label>
+              <input id="year" type="number" name="year" max='2025' placeholder="Year Built">
+            </div>
+            <div class="mb-2">
+              <label for="bedrooms">Bedrooms</label>
+              <input id="bedrooms" type="number" name="bedrooms" placeholder="Number Of Bedrooms" min="1" max="30">
+            </div>
+            <div class="mb-2">
+              <label for="bathrooms">Bathrooms</label>
+              <input id="bathrooms" type="number" name="bathrooms" placeholder="Number Of Bathrooms" min="1" max="20">
+            </div>
+            <div class="mb-2">
+              <label for="sqft">Square Feet</label>
+              <input id="sqft" type="number" name="sqft" placeholder="Square Feet" min="100" max="50000">
+            </div>
+            <div class="mb-2">
+              <label for="price">Price</label>
+              <input id="price" type="number" name="price" placeholder="Price Amount" min="1" max="3000000">
+            </div>
+            <div class="mb-2">
+              <label for="imgUrl">Image URL</label>
+              <input id="imgUrl" type="text" name="imgUrl" placeholder="Image URL" maxlength="400">
+            </div>
+            <div class="mb-2">
+              <label for="description">Description</label>
+              <textarea name="description" id="description" cols="1" rows="5" placeholder="House Description"
+                maxlength="350"></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+
+          </form>
+        </div>
+      </section>
+      <section class="row" id="houseInsert">
+
+      </section>
+    </div>
 
   </main>
 
@@ -64,3 +119,17 @@
 </body>
 
 </html>
+<!-- <div class="col-10">
+    <div class="d-flex m-3 mt-4 border border-2 border-dark shadow">
+
+      <img class="house-img "
+        src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        alt="house">
+      <div class="p-3 fs-4 ">
+        <p class="fs-2 m-0">Gregory Talor</p>
+        <p>Price: 450000</p>
+        <p>Year: 1995</p>
+        <p>5 Bedrooms, 2.5 Bathrooms, 1800 Square Feet,</p>
+        <p>Description: this is house</p>
+      </div>
+    </div> -->
