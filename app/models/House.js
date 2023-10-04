@@ -30,7 +30,7 @@ export class House {
         <p>Description: ${this.description}</p>
         <div class="text-end ">
         <button type="button" class="btn btn-danger" onclick="app.HousesController.removeHouse('${this.id
-      }')">Delete</button>
+      }')">Sold!</button>
         </div>
       </div>
     </div>
